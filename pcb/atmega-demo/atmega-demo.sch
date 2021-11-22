@@ -1,0 +1,236 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-AU U1
+U 1 1 61C4B03F
+P 3700 2850
+F 0 "U1" H 3250 1400 50  0000 C CNN
+F 1 "ATmega328P-AU" H 3550 1800 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 3700 2850 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3700 2850 50  0001 C CNN
+F 4 "C14877" H 3700 2850 50  0001 C CNN "LCSC"
+	1    3700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 61C4C560
+P 4750 2300
+F 0 "Y1" H 4750 2568 50  0000 C CNN
+F 1 "Crystal" H 4750 2477 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 4750 2300 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/2103291133_Yangxing-Tech-X49SM36864MSD2SC-1_C2238.pdf" H 4750 2300 50  0001 C CNN
+F 4 "C2238" H 4750 2300 50  0001 C CNN "LCSC"
+	1    4750 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61C50DB5
+P 5250 2450
+F 0 "C1" V 5400 2450 50  0000 C CNN
+F 1 "12p" V 5500 2450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5288 2300 50  0001 C CNN
+F 3 "~" H 5250 2450 50  0001 C CNN
+F 4 "C1792" H 5250 2450 50  0001 C CNN "LCSC"
+	1    5250 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 61C51172
+P 5250 2150
+F 0 "C2" V 5502 2150 50  0000 C CNN
+F 1 "12p" V 5411 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5288 2000 50  0001 C CNN
+F 3 "~" H 5250 2150 50  0001 C CNN
+F 4 "C1792" H 5250 2150 50  0001 C CNN "LCSC"
+	1    5250 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4550 2150 4550 2250
+Wire Wire Line
+	4550 2250 4300 2250
+Wire Wire Line
+	4550 2350 4550 2450
+Wire Wire Line
+	4550 2450 4750 2450
+Wire Wire Line
+	5100 2150 4750 2150
+Wire Wire Line
+	4550 2150 4750 2150
+Connection ~ 4750 2150
+Wire Wire Line
+	5100 2450 4750 2450
+Connection ~ 4750 2450
+Wire Wire Line
+	5400 2150 5400 2450
+$Comp
+L Switch:SW_MEC_5E SW1
+U 1 1 61C5AAE0
+P 5000 3150
+F 0 "SW1" H 5000 3535 50  0000 C CNN
+F 1 "SW_MEC_5E" H 5000 3444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 5000 3450 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1811092141_C&K-PTS810SJM250SMTRLFS_C116501.pdf" H 5000 3450 50  0001 C CNN
+F 4 "C116501" H 5000 3150 50  0001 C CNN "LCSC"
+	1    5000 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3150 4500 3150
+Wire Wire Line
+	4800 3050 4800 3150
+Connection ~ 4800 3150
+Wire Wire Line
+	5200 3050 5200 3150
+$Comp
+L Device:R R1
+U 1 1 61C5D298
+P 4500 3000
+F 0 "R1" H 4570 3046 50  0000 L CNN
+F 1 "5K" H 4570 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 3000 50  0001 C CNN
+F 3 "~" H 4500 3000 50  0001 C CNN
+F 4 "C78980" H 4500 3000 50  0001 C CNN "LCSC"
+	1    4500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2350 4550 2350
+Wire Wire Line
+	3700 1100 3700 1350
+Connection ~ 4500 3150
+Wire Wire Line
+	4500 3150 4800 3150
+$Comp
+L power:+5V #PWR?
+U 1 1 61C66793
+P 3700 1100
+F 0 "#PWR?" H 3700 950 50  0001 C CNN
+F 1 "+5V" H 3715 1273 50  0000 C CNN
+F 2 "" H 3700 1100 50  0001 C CNN
+F 3 "" H 3700 1100 50  0001 C CNN
+	1    3700 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61C67758
+P 4500 2800
+F 0 "#PWR?" H 4500 2650 50  0001 C CNN
+F 1 "+5V" H 4515 2973 50  0000 C CNN
+F 2 "" H 4500 2800 50  0001 C CNN
+F 3 "" H 4500 2800 50  0001 C CNN
+	1    4500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2850 4500 2800
+$Comp
+L power:GND #PWR?
+U 1 1 61C6A870
+P 3700 4400
+F 0 "#PWR?" H 3700 4150 50  0001 C CNN
+F 1 "GND" H 3705 4227 50  0000 C CNN
+F 2 "" H 3700 4400 50  0001 C CNN
+F 3 "" H 3700 4400 50  0001 C CNN
+	1    3700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4350 3700 4400
+$Comp
+L power:GND #PWR?
+U 1 1 61C6CBBC
+P 5300 3150
+F 0 "#PWR?" H 5300 2900 50  0001 C CNN
+F 1 "GND" H 5305 2977 50  0000 C CNN
+F 2 "" H 5300 3150 50  0001 C CNN
+F 3 "" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C6CFE0
+P 5400 2500
+F 0 "#PWR?" H 5400 2250 50  0001 C CNN
+F 1 "GND" H 5405 2327 50  0000 C CNN
+F 2 "" H 5400 2500 50  0001 C CNN
+F 3 "" H 5400 2500 50  0001 C CNN
+	1    5400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2500 5400 2450
+Connection ~ 5400 2450
+Wire Wire Line
+	5300 3150 5200 3150
+Connection ~ 5200 3150
+$Comp
+L Device:C C3
+U 1 1 61C6EA34
+P 4550 900
+F 0 "C3" H 4665 946 50  0000 L CNN
+F 1 "100n" H 4665 855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4588 750 50  0001 C CNN
+F 3 "~" H 4550 900 50  0001 C CNN
+F 4 "C49678" H 4550 900 50  0001 C CNN "LCSC"
+	1    4550 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 61C70417
+P 4550 1200
+F 0 "L1" H 4602 1246 50  0000 L CNN
+F 1 "10u" H 4602 1155 50  0000 L CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 4550 1200 50  0001 C CNN
+F 3 "~" H 4550 1200 50  0001 C CNN
+	1    4550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C70A4A
+P 4550 1350
+F 0 "#PWR?" H 4550 1100 50  0001 C CNN
+F 1 "GND" H 4555 1177 50  0000 C CNN
+F 2 "" H 4550 1350 50  0001 C CNN
+F 3 "" H 4550 1350 50  0001 C CNN
+	1    4550 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1000 3800 1350
+Wire Wire Line
+	3800 1000 4550 1000
+$Comp
+L power:+5V #PWR?
+U 1 1 61C74CF9
+P 4550 750
+F 0 "#PWR?" H 4550 600 50  0001 C CNN
+F 1 "+5V" H 4565 923 50  0000 C CNN
+F 2 "" H 4550 750 50  0001 C CNN
+F 3 "" H 4550 750 50  0001 C CNN
+	1    4550 750 
+	1    0    0    -1  
+$EndComp
+Text Notes 4700 750  0    50   ~ 0
+Use analogue ground plane under corner of chip (Fig 23.9) from PC5 round to AVCC
+$EndSCHEMATC
