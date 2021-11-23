@@ -43,3 +43,25 @@ The key components are an Atmega328P, a CH340 USB transceiver, an ACS712 current
 |ATmega328P-AU       |U3                 |Package_QFP:TQFP-32_7x7mm_P0.8mm                          |C14877  |
 |CH340G              |U4                 |Package_SO:SOIC-16_3.9x9.9mm_P1.27mm                      |C14267  |
 |12MHz               |Y1,Y2              |Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm                   |C97242  |
+
+## Production
+
+
+### DFM
+
+The design for manufacture showed a couple of small issues:
+
+![dfm](./img/dfm.png)
+
+The parts placement as shown on upload (known to disply with incorrect rotations):
+
+![original_parts](./img/original_parts.png)
+
+The corrected placement after processing by JLCPCB (parts now oriented the same as the 3D output from KiCAD:
+
+![corrected_parts](./img/corrected_parts.png)
+
+
+
+
+
